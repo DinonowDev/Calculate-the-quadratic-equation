@@ -1,0 +1,211 @@
+@font-face {
+  font-family: iranSans;
+  src: url("../fonts/eot/IRANSansWeb.eot"), url("../fonts/ttf/IRANSansWeb.ttf"),
+    url("../fonts/woff/IRANSansWeb.woff"),
+    url("../fonts/woff2/IRANSansWeb.woff2");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  outline: none;
+}
+
+body {
+  font-family: "iranSans";
+  .main {
+    background: linear-gradient(130deg, #ee5253, #ff6b6b, #ff9f43, #feca57);
+    width: 100%;
+    height: 100%;
+    background-attachment: fixed;
+    background-size: cover;
+    .socialMedia{
+      position: fixed;
+      left: 50%;
+      top: 20px;
+      transform: translateX(-50%);
+      font-size: 30px;
+      .fa {
+        color: #fff;
+        transition: all 0.2s ease-in-out;
+        &:hover{
+          font-size: 35px;
+        }
+      }
+    }
+    .box {
+      width: 600px;
+      min-height: 300px;
+      padding: 40px;
+      background-color: rgba($color: #fff, $alpha: 0.4);
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      border-radius: 15px;
+      text-align: center;
+      .inputValuesLine {
+        margin: 40px auto 15px;
+        font-weight: bold;
+        color: #eb4d4b;
+        font-size: 40px;
+        sup {
+          font-size: 20px;
+        }
+        input[type="number"] {
+          color: #fff;
+          background-color: transparent;
+          width: 80px;
+          height: 40px;
+          padding: 5px;
+          font-size: 35px;
+          border-radius: 6px;
+          border: none;
+          border: 0.5px solid rgba(255, 255, 255, 0.486);
+          &:focus {
+            outline: none;
+          }
+          &::placeholder {
+            color: #fff;
+          }
+        }
+      }
+      .cal {
+        margin: 40px auto 10px;
+        position: relative;
+        cursor: pointer;
+        background: transparent;
+        border: 1px solid #eb4d4b;
+        outline: none;
+        transition: all 1s ease-in-out;
+        width: 150px;
+        height: 60px;
+
+        svg {
+          width: 150px;
+          height: 60px;
+          position: absolute;
+          left: 0;
+          top: 0;
+          fill: none;
+          stroke: #fff;
+          stroke-dasharray: 150 450;
+          stroke-dashoffset: 150;
+          transition: 1s ease-in-out;
+        }
+
+        &:hover {
+          transition: 1s ease-in-out;
+          background: #eb4d4b;
+        }
+
+        &:hover span {
+          transition: 1s ease-in-out;
+          color: #fff;
+        }
+
+        &:hover svg {
+          stroke-dashoffset: -450;
+        }
+
+        span {
+          color: #eb4d4b;
+          font-size: 18px;
+          font-weight: 100;
+        }
+      }
+      .radioDiv {
+        font-size: 17px;
+        color: #fff;
+        margin: 20px auto 0px;
+        label {
+          width: 80px;
+          margin: auto;
+          display: flex;
+          position: relative;
+          padding-left: 35px;
+          cursor: pointer;
+          font-size: 22px;
+
+          &:hover input ~ .checkmark {
+            background-color: #ccc;
+          }
+
+          .checkmark {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 25px;
+            width: 25px;
+            background-color: #eee;
+            border-radius: 50%;
+            &::after {
+              content: "";
+              position: absolute;
+              display: none;
+            }
+            &::after {
+              top: 9px;
+              left: 9px;
+              width: 8px;
+              height: 8px;
+              border-radius: 50%;
+              background: white;
+            }
+          }
+
+          input {
+            position: absolute;
+            opacity: 0;
+            cursor: pointer;
+            &:checked ~ .checkmark:after {
+              display: block;
+            }
+            &:checked ~ .checkmark:after {
+              display: block;
+            }
+            &:checked ~ .checkmark {
+              background-color: #2196f3;
+            }
+          }
+        }
+      }
+    }
+    .mainMath {
+      color: #fff;
+      h2 {
+        margin: 5px auto 15px;
+        font-weight: bold;
+      }
+      p {
+        line-height: 30px;
+      }
+      .err-math {
+        border: 2px solid #ee5253;
+        background-color: #ee5253;
+        padding: 10px;
+        width: 65%;
+        margin: 20px auto;
+        border-radius: 8px;
+        transition: all 1s ease-in-out;
+        &:hover {
+          background-color: transparent;
+          color: #ee5253;
+        }
+      }
+      .result {
+        border: 2px solid #00b894;
+        background-color: #00b894;
+        padding: 5px;
+        width: 25%;
+        margin: 20px auto;
+        border-radius: 8px;
+        transition: all 1s ease-in-out;
+        &:hover {
+          background-color: transparent;
+          color: #00b894;
+        }
+      }
+    }
+  }
+}

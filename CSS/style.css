@@ -1,0 +1,234 @@
+@font-face {
+  font-family: iranSans;
+  src: url("../fonts/eot/IRANSansWeb.eot"), url("../fonts/ttf/IRANSansWeb.ttf"), url("../fonts/woff/IRANSansWeb.woff"), url("../fonts/woff2/IRANSansWeb.woff2");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  outline: none;
+}
+
+body {
+  font-family: "iranSans";
+}
+
+body .main {
+  background: linear-gradient(130deg, #ee5253, #ff6b6b, #ff9f43, #feca57);
+  width: 100%;
+  height: 100%;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+body .main .socialMedia {
+  position: fixed;
+  left: 50%;
+  top: 20px;
+  transform: translateX(-50%);
+  font-size: 30px;
+}
+
+body .main .socialMedia .fa {
+  color: #fff;
+  transition: all 0.2s ease-in-out;
+}
+
+body .main .socialMedia .fa:hover {
+  font-size: 35px;
+}
+
+body .main .box {
+  width: 600px;
+  min-height: 300px;
+  padding: 40px;
+  background-color: rgba(255, 255, 255, 0.4);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 15px;
+  text-align: center;
+}
+
+body .main .box .inputValuesLine {
+  margin: 40px auto 15px;
+  font-weight: bold;
+  color: #eb4d4b;
+  font-size: 40px;
+}
+
+body .main .box .inputValuesLine sup {
+  font-size: 20px;
+}
+
+body .main .box .inputValuesLine input[type="number"] {
+  color: #fff;
+  background-color: transparent;
+  width: 80px;
+  height: 40px;
+  padding: 5px;
+  font-size: 35px;
+  border-radius: 6px;
+  border: none;
+  border: 0.5px solid rgba(255, 255, 255, 0.486);
+}
+
+body .main .box .inputValuesLine input[type="number"]:focus {
+  outline: none;
+}
+
+body .main .box .inputValuesLine input[type="number"]::placeholder {
+  color: #fff;
+}
+
+body .main .box .cal {
+  margin: 40px auto 10px;
+  position: relative;
+  cursor: pointer;
+  background: transparent;
+  border: 1px solid #eb4d4b;
+  outline: none;
+  transition: all 1s ease-in-out;
+  width: 150px;
+  height: 60px;
+}
+
+body .main .box .cal svg {
+  width: 150px;
+  height: 60px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  fill: none;
+  stroke: #fff;
+  stroke-dasharray: 150 450;
+  stroke-dashoffset: 150;
+  transition: 1s ease-in-out;
+}
+
+body .main .box .cal:hover {
+  transition: 1s ease-in-out;
+  background: #eb4d4b;
+}
+
+body .main .box .cal:hover span {
+  transition: 1s ease-in-out;
+  color: #fff;
+}
+
+body .main .box .cal:hover svg {
+  stroke-dashoffset: -450;
+}
+
+body .main .box .cal span {
+  color: #eb4d4b;
+  font-size: 18px;
+  font-weight: 100;
+}
+
+body .main .box .radioDiv {
+  font-size: 17px;
+  color: #fff;
+  margin: 20px auto 0px;
+}
+
+body .main .box .radioDiv label {
+  width: 80px;
+  margin: auto;
+  display: flex;
+  position: relative;
+  padding-left: 35px;
+  cursor: pointer;
+  font-size: 22px;
+}
+
+body .main .box .radioDiv label:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+body .main .box .radioDiv label .checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #eee;
+  border-radius: 50%;
+}
+
+body .main .box .radioDiv label .checkmark::after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+body .main .box .radioDiv label .checkmark::after {
+  top: 9px;
+  left: 9px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: white;
+}
+
+body .main .box .radioDiv label input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+body .main .box .radioDiv label input:checked ~ .checkmark:after {
+  display: block;
+}
+
+body .main .box .radioDiv label input:checked ~ .checkmark:after {
+  display: block;
+}
+
+body .main .box .radioDiv label input:checked ~ .checkmark {
+  background-color: #2196f3;
+}
+
+body .main .mainMath {
+  color: #fff;
+}
+
+body .main .mainMath h2 {
+  margin: 5px auto 15px;
+  font-weight: bold;
+}
+
+body .main .mainMath p {
+  line-height: 30px;
+}
+
+body .main .mainMath .err-math {
+  border: 2px solid #ee5253;
+  background-color: #ee5253;
+  padding: 10px;
+  width: 65%;
+  margin: 20px auto;
+  border-radius: 8px;
+  transition: all 1s ease-in-out;
+}
+
+body .main .mainMath .err-math:hover {
+  background-color: transparent;
+  color: #ee5253;
+}
+
+body .main .mainMath .result {
+  border: 2px solid #00b894;
+  background-color: #00b894;
+  padding: 5px;
+  width: 25%;
+  margin: 20px auto;
+  border-radius: 8px;
+  transition: all 1s ease-in-out;
+}
+
+body .main .mainMath .result:hover {
+  background-color: transparent;
+  color: #00b894;
+}

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>حل معادلات درجه دو</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="CSS/style.css" />
+  </head>
+  <body>
+    <div class="main" id="particles-js">
+      <div class="socialMedia">
+        <a href="https://github.com/DinonowDev"><i class="fa fa-github"></i></a>
+        <a href="https://t.me/Dinonow"><i class="fa fa-telegram"></i></a>
+      </div>
+      <div class="box">
+        <div class="inputDiv">
+          <p class="inputValuesLine">
+            <input type="number" name="a" id="inputA" placeholder="a" />
+            x<sup>2</sup> +
+            <input type="number" name="b" id="inputB" placeholder="b" />
+            x +
+            <input type="number" name="c" id="inputC" placeholder="c" />
+            = 0
+          </p>
+
+          <div class="radioDiv">
+            <label for="delta"
+              >Delta
+              <input type="radio" name="type" id="delta" value="0" checked />
+              <span class="checkmark"></span>
+            </label>
+            <br />
+            <label for="square"
+              >Square
+              <input type="radio" name="type" id="square" value="1" />
+              <span class="checkmark"></span>
+            </label>
+          </div>
+
+          <button id="cal" class="cal">
+            <svg
+              width="180px"
+              height="60px"
+              viewBox="0 0 150 60"
+              class="border"
+            >
+              <polyline points="179,1 179,59 1,59 1,1 179,1" class="bg-line" />
+              <polyline points="179,1 179,59 1,59 1,1 179,1" class="hl-line" />
+            </svg>
+            <span> Calculate </span>
+          </button>
+        </div>
+        <div class="mainMath"></div>
+      </div>
+    </div>
+    <script src="JS/particles.min.js"></script>
+    <script src="Config/AppParticles.js"></script>
+    <script src="JS/app.js"></script>
+  </body>
+</html>
