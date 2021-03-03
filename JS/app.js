@@ -22,8 +22,7 @@ function getValue() {
     alert("لطفا تمامی مقادیر را به صورت کامل وارد کنید");
   } else {
     let num;
-    deltaRadio ? (num = 0) : (num = 1);
-    console.log(inputA.value, inputB.value, inputC.value, num);
+    deltaRadio.checked ? (num = 0) : (num = 1);
     machine(inputA.value, inputB.value, inputC.value, type[num]);
   }
 }
@@ -99,9 +98,9 @@ const rootOfEquationSquare = (a, b, c, numberNROE) => {
               <h2>معادله درجه دوم با روش مربع کامل</h2> 
               <p> ${a}x<sup>2</sup> + ${b}x + ${c} = 0 </p>
               <p> ${a} ( x<sup>2</sup> + ${b}/${a}x + ${c}/${a} ) = 0 </p>
-              <p> x<sup>2</sup> + ${b}/${a}x + ${c}/${a} = -${c}/${a} + ${c}/${a} </p>
-              <p>( x + ${Number(Math.sqrt(halfX2).toFixed(5))})<sup>2</sup> = -${Number(halfX2.toFixed(5))} + ${Number(halfX2.toFixed(5))}</p>
-              <p>( x + ${Number(Math.sqrt(halfX2).toFixed(5))} )<sup>2</sup> = ${(halfX2 * 100 - ac * 100) / 100}</p>
+              <p> x<sup>2</sup> + ${b}/${a}x + ${Number(halfX2.toFixed(5))} = ${-c}/${a} + ${Number(halfX2.toFixed(5))} </p>
+              <p>( x + ${Number(Math.sqrt(halfX2).toFixed(5))})<sup>2</sup> = ${-c}/${a} + ${Number(halfX2.toFixed(5))}</p>
+              <p>( x + ${Number(Math.sqrt(halfX2).toFixed(5))} )<sup>2</sup> = ${Number(((halfX2 * 100 - ac * 100) / 100).toFixed(5))}</p>
               ${result}`;
   return mathWay;
 };
@@ -131,3 +130,16 @@ const machine = (a, b, c, type) => {
   inputDiv.style.display = "none";
   mainMath.innerHTML = mainMath.innerHTML + mathWay;
 };
+
+
+/* async function countGithub(repo) {
+    const response = await fetch(`https://api.github.com/repos/${repo}/stats/contributors`)
+    const contributors = await response.json();
+    const lineCounts = contributors.map(contributor => (
+        contributor.weeks.reduce((lineCount, week) => lineCount + week.a - week.d, 0)
+    ));
+    const lines = lineCounts.reduce((lineTotal, lineCount) => lineTotal + lineCount);
+    window.alert(lines);
+}
+
+countGithub('DinonowDev/Calculate-the-quadratic-equation'); // or count anything you like */
