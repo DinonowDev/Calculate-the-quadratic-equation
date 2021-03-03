@@ -8,18 +8,50 @@
 * {
   margin: 0;
   padding: 0;
-  outline: none;
+}
+
+@media only screen and (max-width: 768px) {
+  .main {
+    background: url("../assets/cool-background.png");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    width: 100%;
+    min-height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    .box{
+      width: 80%;
+      min-height: 300px;
+      padding: 20px;
+    }
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .main {
+    background: linear-gradient(130deg, #ee5253, #ff6b6b, #ff9f43, #feca57);
+    width: 100%;
+    min-height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    .box{
+      width: 600px;
+      min-height: 300px;
+      padding: 40px;
+    }
+  }
 }
 
 body {
   font-family: "iranSans";
   .main {
-    background: linear-gradient(130deg, #ee5253, #ff6b6b, #ff9f43, #feca57);
-    width: 100%;
-    height: 100%;
-    background-attachment: fixed;
-    background-size: cover;
-    .socialMedia{
+    .socialMedia {
       position: fixed;
       left: 50%;
       top: 20px;
@@ -28,18 +60,15 @@ body {
       .fa {
         color: #fff;
         transition: all 0.2s ease-in-out;
-        &:hover{
+        &:hover {
           font-size: 35px;
         }
       }
     }
     .box {
-      width: 600px;
-      min-height: 300px;
-      padding: 40px;
       background-color: rgba($color: #fff, $alpha: 0.4);
       position: absolute;
-      top: 50%;
+      top: 55%;
       left: 50%;
       transform: translate(-50%, -50%);
       border-radius: 15px;
