@@ -1,13 +1,13 @@
 // Variables
 let type = ["delta", "Square"];
-mainMath = document.querySelector(".mainMath");
-buttonCal = document.querySelector("#cal");
-inputA = document.querySelector("#inputA");
-inputB = document.querySelector("#inputB");
-inputC = document.querySelector("#inputC");
-deltaRadio = document.querySelector("#delta");
-squareRadio = document.querySelector("#square");
-inputDiv = document.querySelector(".inputDiv");
+let mainMath = document.querySelector(".mainMath");
+let buttonCal = document.querySelector("#cal");
+let inputA = document.querySelector("#inputA");
+let inputB = document.querySelector("#inputB");
+let inputC = document.querySelector("#inputC");
+let deltaRadio = document.querySelector("#delta");
+let squareRadio = document.querySelector("#square");
+let inputDiv = document.querySelector(".inputDiv");
 
 // EL
 const EL = () => {
@@ -38,14 +38,14 @@ const rootOfEquationDelta = (a, b, c, numberNROE, delta) => {
     // set answers to variables
     result = `${elementDeltaRound2}
                   <div class="result">
-                    x<sub>1</sub> = ${Number(answerOne.toFixed(4))}
+                    x<sub>1</sub> = ${Number(answerOne.toFixed(5))}
                       <br/> 
-                    x<sub>2</sub> = ${Number(answerTwo.toFixed(4))} 
+                    x<sub>2</sub> = ${Number(answerTwo.toFixed(5))} 
                   </div>`;
   } else if (numberNROE == 1) {
     result = `${elementDeltaRound2}
                   <div class="result">
-                    x<sub>1</sub> = ${Number(answerTwo.toFixed(4))}
+                    x<sub>1</sub> = ${Number(answerTwo.toFixed(5))}
                   </div>`;
   } else {
     // set Error
@@ -67,7 +67,7 @@ const rootOfEquationSquare = (a, b, c, numberNROE) => {
     ac = c / a;
   let halfX2 = Math.pow(ab / 2, 2);
   let elementSquareRound2 = `<p>x + ${Number(
-    Math.sqrt(halfX2).toFixed(4)
+    Math.sqrt(halfX2).toFixed(5)
   )} = ±${Math.sqrt((halfX2 * 100 - ac * 100) / 100)}</p>`;
   let jahat1 = 1;
   let jahat2 = 1;
@@ -81,15 +81,15 @@ const rootOfEquationSquare = (a, b, c, numberNROE) => {
   if (numberNROE == 2) {
     result = `${elementSquareRound2}
                 <div class="result">
-                  x<sub>1</sub> = ${jahat1 *  Number(((Math.sqrt(halfX2) * 1000 + Math.sqrt((halfX2 * 100 - ac * 100) / 100) * 1000) / 1000 ).toFixed(4))}
+                  x<sub>1</sub> = ${jahat1 *  Number(((Math.sqrt(halfX2) * 1000 + Math.sqrt((halfX2 * 100 - ac * 100) / 100) * 1000) / 1000 ).toFixed(5))}
                     <br/>
-                  x<sub>2</sub> = ${jahat2 * Number(((Math.sqrt(halfX2) * 1000 - Math.sqrt((halfX2 * 100 - ac * 100) / 100) * 1000) / 1000 ).toFixed(4))}
+                  x<sub>2</sub> = ${jahat2 * Number(((Math.sqrt(halfX2) * 1000 - Math.sqrt((halfX2 * 100 - ac * 100) / 100) * 1000) / 1000 ).toFixed(5))}
                 </div>
               `;
   } else if (numberNROE == 1) {
     result = ` ${elementSquareRound2}
                 <div class="result">
-                x<sub>2</sub> = ${jahat1 * Number(((Math.sqrt(halfX2) * 1000 - Math.sqrt((halfX2 * 100 - ac * 100) / 100) * 1000) / 1000).toFixed(4))} 
+                x<sub>2</sub> = ${jahat1 * Number(((Math.sqrt(halfX2) * 1000 - Math.sqrt((halfX2 * 100 - ac * 100) / 100) * 1000) / 1000).toFixed(5))} 
                 </div>
               `;
   } else {
@@ -100,8 +100,8 @@ const rootOfEquationSquare = (a, b, c, numberNROE) => {
               <p> ${a}x<sup>2</sup> + ${b}x + ${c} = 0 </p>
               <p> ${a} ( x<sup>2</sup> + ${b}/${a}x + ${c}/${a} ) = 0 </p>
               <p> x<sup>2</sup> + ${b}/${a}x + ${c}/${a} = -${c}/${a} + ${c}/${a} </p>
-              <p>( x + ${Number(Math.sqrt(halfX2).toFixed(4))})<sup>2</sup> = -${Number(halfX2.toFixed(4))} + ${Number(halfX2.toFixed(4))}</p>
-              <p>( x + ${Number(Math.sqrt(halfX2).toFixed(4))} )<sup>2</sup> = ${(halfX2 * 100 - ac * 100) / 100}</p>
+              <p>( x + ${Number(Math.sqrt(halfX2).toFixed(5))})<sup>2</sup> = -${Number(halfX2.toFixed(5))} + ${Number(halfX2.toFixed(5))}</p>
+              <p>( x + ${Number(Math.sqrt(halfX2).toFixed(5))} )<sup>2</sup> = ${(halfX2 * 100 - ac * 100) / 100}</p>
               ${result}`;
   return mathWay;
 };
